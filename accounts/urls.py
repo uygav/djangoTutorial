@@ -1,6 +1,10 @@
 from django.urls import path
 from . import views # have to access view.py for http def's
 urlpatterns = [
+    path('register/',views.registerPage,name="register"),
+    path('login/',views.loginPage,name="login"),
+    path('logout/',views.logoutUser,name="logout"),
+
     path('',views.home , name="home"),
     path('products/',views.products , name='products'),
     path('customer/<str:pk_test>/',views.customer , name="customer"),
